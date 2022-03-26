@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionSuite" parallel="classes" thread-count="5">
+	<parameter name="pageTitle" value="Google" />
+	<listeners>
+		<listener class-name="selenium.test.TestNGListener" />
+	</listeners>
+	<test name="BasicTests">
+		<classes>
+			<class name="selenium.test.PageTitleTest" />
+		</classes>
+	</test>
+</suite>
